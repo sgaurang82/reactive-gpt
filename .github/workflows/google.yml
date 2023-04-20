@@ -19,11 +19,11 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GAR_LOCATION: us-central1 # TODO: update region of the Artifact Registry
-  GKE_CLUSTER: cluster-1    # TODO: update to cluster name
+  GKE_CLUSTER: gpt-cluster  # TODO: update to cluster name
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
-  REPOSITORY: samples # TODO: update to Artifact Registry docker repository
-  IMAGE: static-site
+  DEPLOYMENT_NAME: gpt-deployment # TODO: update to deployment name
+  REPOSITORY: reactive-gpt # TODO: update to Artifact Registry docker repository
+  IMAGE: reactive-gpt
 
 jobs:
   setup-build-publish-deploy:
@@ -46,7 +46,7 @@ jobs:
       with:
         token_format: 'access_token'
         workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: 'my-service-account@my-project.iam.gserviceaccount.com'
+        service_account: 'sv-git-hub-deploy@bamboo-reason-380714.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
