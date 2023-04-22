@@ -45,8 +45,8 @@ jobs:
       uses: 'google-github-actions/auth@v0'
       with:
         token_format: 'access_token'
-        workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: 'sv-git-hub-deploy@bamboo-reason-380714.iam.gserviceaccount.com'
+        workload_identity_provider: 'projects/20203912838/locations/global/workloadIdentityPools/github-actions/providers/github'
+        service_account: 'gihub-actions-sa-gcp@bamboo-reason-380714.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
