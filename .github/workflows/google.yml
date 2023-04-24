@@ -23,7 +23,7 @@ env:
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gpt-deployment # TODO: update to deployment name
   REPOSITORY: reactive-gpt # TODO: update to Artifact Registry docker repository
-  IMAGE: reactive-gpt
+  IMAGE: reactive-gpt-app
 
 jobs:
   setup-build-publish-deploy:
